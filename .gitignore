@@ -1,0 +1,9 @@
+/.idea
+/console
+/environments
+/frontend
+/vagrant
+/vendor
+composer.lock
+composer.phar
+phpunit.xml

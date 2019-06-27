@@ -34,6 +34,7 @@ class PaySearch extends Model
     public $updated_at;
     public $fetch_count;
     public $order_status_id;
+    public $order;
 
     public function search($params)
     {
@@ -77,6 +78,7 @@ class PaySearch extends Model
             'transaction_order' => $this->transaction_order,
             'updated_at' => $this->updated_at,
             'fetch_count' => $this->fetch_count,
+            'order' => $this->order,
         ]);
 
         $query->andFilterWhere(['like', 'identifier', $this->identifier])

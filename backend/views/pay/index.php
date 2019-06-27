@@ -20,6 +20,11 @@ $this->params['breadcrumbs'][] = $this->title;
     'columns' => [
         'pay_id',
         'module',
+        [
+            'label'=>'order',
+            'attribute'=>'order',
+            'value'=>'text'
+        ],
         'identifier',
         'customer_id',
         'payment_code',

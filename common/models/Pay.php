@@ -43,6 +43,12 @@ class Pay extends \yii\db\ActiveRecord
         return 'oc_pay';
     }
 
+    public function getOrder()
+    {
+        return $this->hasMany(PayOrder::className(), ['pay_id' => 'pay_id'])
+            ->viaTable(Order::className(), ['order_id' => 'order_id']);
+    }
+
     /**
      * @inheritdoc
      */
